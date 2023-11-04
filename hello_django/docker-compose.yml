@@ -5,7 +5,7 @@ services:
     image: 272197233782.dkr.ecr.us-west-1.amazonaws.com/django_aws:django_aws_web
     command: gunicorn hello_django.wsgi:application --bind 0.0.0.0:8000
     volumes:
-      - ./app/:/usr/hello_django/manage/
+      - ./manage/:/usr/hello_django/manage/
       - static_volume:/usr/hello_django/manage/static
     expose:
       - 8000
